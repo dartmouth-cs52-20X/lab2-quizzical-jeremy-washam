@@ -1,0 +1,224 @@
+/* General styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+}
+
+header {
+    height: 300px;
+    background: url(img/background.jpg);
+    font-family: 'Do Hyeon', sans-serif;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: right;
+    /* I found this css box shadow effect here: https://www.w3schools.com/css/css3_shadows_box.asp */ 
+    /* Note: I applied the same box shadow effect that I used on the items below */
+    /* I'm sure some of this is superfluous here but I like how it looks and didn't want to mess with it*/
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: white;
+    padding-top: 20px;
+    padding-right: 20px;
+    margin: 0px;
+}
+
+/* Question styling */
+
+#quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin-top: 100px;
+    /* I found this css box shadow effect here: https://www.w3schools.com/css/css3_shadows_box.asp */ 
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.question p {
+    color: #4e0f9e;
+    text-decoration: underline;
+    text-decoration-color: gold;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.question img {
+    max-width: 500px;
+    overflow: hidden;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
+    justify-content: space-around;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+/*Used this to scale the item: https://travis.media/how-to-make-an-item-grow-on-hover-with-css/ */
+.options label {
+    width: 220px;
+    text-align: center;
+    padding-top: 20px;
+    transition: all .2s ease-in-out; 
+}
+
+.options label:hover {
+    color: #4e0f9e;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label div{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/*Used this to select the checked item https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+input[type=radio]:checked+div {
+    color: #4e0f9e;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: 700;
+}
+
+.nonactive {
+    opacity: 0.5;
+}
+
+/*Image question styling */
+
+#image-label{
+    width: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#image-answer {
+    max-width: 150px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.options #image-answer:hover {
+    /* I found this css box shadow effect here: https://www.w3schools.com/css/css3_shadows_box.asp */ 
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type=radio]:checked ~ #image-answer {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.05);
+}
+
+
+/* Button styling */
+
+#results-button {
+    background-color: #efefef;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+#button-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#results-button:hover {
+    background-color: #4e0f9e;
+    color: white;
+}
+
+/* Modal styling */
+/* Used this for the modal: https://www.w3schools.com/howto/howto_css_modals.asp */
+/* I changed a few things but a lot of it stayed the same */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7); 
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 45%; 
+    border-radius: 10px;
+}
+
+#modal-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.modal-content img {
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: #4e0f9e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
