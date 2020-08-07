@@ -1,5 +1,9 @@
 # CS52 Lab 2: Which Bojack Horseman Character Are You?
 
+## Resubmit note
+
+Just updated this for my resubmit. I didn't change too much; the biggest difference is that I figured out how to add a non-selected state (which makes it look a lot better in my opinion). This also solved the problem of having no selected state for the image question. 
+
 ## Overview
 
 For this project, I built a Buzzfeed style quiz to determine which character you are most similar to from the show Bojack Horseman. The closest inspiration for the style of my page was this (from The Quiz), https://www.thequiz.com/which-bojack-horseman-character-are-you/ (which has a similar structure of question, image, answer choices). However, I like the style and content of my own page a lot more, and it's quite different. 
@@ -20,12 +24,7 @@ Every resource I used for this project is cited in comments in my code, but I fi
 </ul>
 
 ## Reservations
-
-This one got away from me honestly. I started late and planned on using an extension and finishing it Monday night, but it took way longer than I expected AND I didn't get nearly as far as I hoped. While I am happy with the current result (and happy with how much I learned while doing this), I have no doubt that I could make this a lot better with some more work. I will almost certainly end up using one of my resubmits on this later on (alsobecause of how late the original submission is).
-
-Some specific reservations about this lab:
 <ul>
-  <li>I couldn't figure out how to change the opacity on answers that weren't selected. I spent an inordinate amount of time trying to figure this out and I'm upset that I wasn't able to do it</li>
   <li>I didn't get a change to try loading in the questions from a JSON file</li>
   <li>I would like to have a cooler modal transition effect, but I couldn't figure out how to implement any of the ones I found online.</li>
   <li>I'd also like for the page to automatically scroll to the next question when you pick an answer, but I didn't have time to figure this out either.</li>
