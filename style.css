@@ -15,9 +15,9 @@ header {
     font-family: 'Do Hyeon', sans-serif;
     background-size: cover;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    text-align: right;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
     /* I found this css box shadow effect here: https://www.w3schools.com/css/css3_shadows_box.asp */ 
     /* Note: I applied the same box shadow effect that I used on the items below */
     /* I'm sure some of this is superfluous here but I like how it looks and didn't want to mess with it*/
@@ -143,7 +143,6 @@ input[type=radio]:checked+div {
 
 input[type=radio]:checked ~ #image-answer {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    transform: scale(1.05);
 }
 
 

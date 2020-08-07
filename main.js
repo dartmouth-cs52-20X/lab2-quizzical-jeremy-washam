@@ -1,3 +1,9 @@
+//Added jQuery for the not selected state
+$('.answer').on('click', function(e) {
+    $(this).removeClass('nonactive');
+    $(this).siblings().addClass('nonactive');
+  });
+
 // I used https://www.w3schools.com/howto/howto_css_modals.asp to figure out how to dislay the modal
 
 // Get the modal, the button that opens it, and the span that closes it
